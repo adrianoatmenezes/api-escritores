@@ -1,6 +1,6 @@
 const conexao = require("../bd/conexao");
 
-class Escritor {
+class Escritores {
   adiciona(escritor, res) {
     const comandoSql = `insert into Escritores set ?`;
     conexao.query(comandoSql, escritor, (err, resultado) => {
@@ -24,4 +24,4 @@ class Escritor {
   }
 }
 
-module.exports = new Escritor();
+module.exports = new Escritores();
